@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arabian Majlis Kondotty – Authentic Arabian Flavours</title>
+    <meta
+      name="description"
+      content="Arabian Majlis Kondotty — Experience authentic Arabian cuisine including Chicken Peri Peri Alfaham, Mandi Rice, and more. Located in Kondotty, Kerala."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" onclick="toggleMobileNav()">✕</button>
+      <a href="#about" onclick="toggleMobileNav()">About</a>
+      <a href="#dishes" onclick="toggleMobileNav()">Menu</a>
+      <a href="#dining" onclick="toggleMobileNav()">Dining</a>
+      <a href="#gallery" onclick="toggleMobileNav()">Gallery</a>
+      <a href="#reviews" onclick="toggleMobileNav()">Reviews</a>
+      <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        Arabian Majlis
+        <span>Kondotty · Kerala</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#dishes">Menu</a>
+        <a href="#dining">Dining</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-cta">Reserve</a>
+      </div>
+      <div class="hamburger" onclick="toggleMobileNav()" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+
+      <!-- Decorative visual grid (CSS-art food imagery) -->
+      <div class="hero-visual arabesque">
+        <div class="hero-img-tile food-alfaham" style="opacity: 0.6"></div>
+        <div class="hero-img-tile rest-int" style="opacity: 0.4"></div>
+        <div class="hero-img-tile food-mandi" style="opacity: 0.7"></div>
+        <div class="hero-img-tile rest-majlis" style="opacity: 0.3"></div>
+        <div class="hero-img-tile food-mazbi" style="opacity: 0.6"></div>
+        <div
+          class="hero-img-tile food-alfaham-mandi"
+          style="opacity: 0.5"
+        ></div>
+        <div class="hero-img-tile food-mandi" style="opacity: 0.4"></div>
+        <div class="hero-img-tile food-alfaham" style="opacity: 0.5"></div>
+        <div class="hero-img-tile rest-int" style="opacity: 0.3"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          Est. Kondotty · Rated 4.2 Stars · 3000+ Reviews
+        </div>
+        <h1 class="hero-title"><em>Arabian</em> Majlis<br />Kondotty</h1>
+        <p class="hero-subtitle">
+          Authentic Arabian Flavours in the Heart of Kondotty
+        </p>
+        <div class="hero-divider"></div>
+        <div class="hero-rating">
+          <div class="stars">★★★★☆</div>
+          <span class="rating-num">4.2</span>
+          <span class="rating-text">/ 3,000+ reviews</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#dishes" class="btn-primary">🍽 View Menu</a>
+          <a
+            href="https://maps.google.com/?q=Arabian+Majlis+Kondotty+Kerala"
+            target="_blank"
+            class="btn-outline"
+            >📍 Get Directions</a
+          >
+          <a href="tel:+917592993344" class="btn-outline">📞 Call Now</a>
+        </div>
+      </div>
+
+      <div
+        class="hero-scroll"
+        onclick="
+          document
+            .getElementById('about')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        <div class="scroll-line"></div>
+        <span class="scroll-text">Discover</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual fade-up">
+            <div class="about-img-main rest-int">
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 6rem;
+                  opacity: 0.6;
+                "
+              >
+                🕌
+              </div>
+            </div>
+            <div class="about-img-badge">
+              <span class="num">4.2</span>
+              <span class="label">★ Rating</span>
+            </div>
+          </div>
+          <div class="about-text fade-up">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">
+              A Taste of <em>Arabia</em><br />in Kerala
+            </h2>
+            <div class="gold-line"></div>
+            <p>
+              Nestled along the Palakkad–Kozhikode Highway in Kondotty, Arabian
+              Majlis brings the rich culinary heritage of the Arabian Peninsula
+              to the heartland of Kerala. From the moment you step in, you are
+              transported to an authentic majlis experience — where hospitality,
+              warmth, and extraordinary food come together.
+            </p>
+            <p>
+              Our kitchen is dedicated to time-honoured Arabian recipes,
+              prepared with the finest spices and freshest ingredients. Whether
+              you're savouring our legendary Chicken Peri Peri Alfaham fresh off
+              the coal grill, or indulging in a fragrant Mandi Rice, every dish
+              tells a story of tradition and passion.
+            </p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-num">3K+</span>
+                <span class="stat-label">Reviews</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">4.2★</span>
+                <span class="stat-label">Rating</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">₹300</span>
+                <span class="stat-label">Avg. Per Person</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR DISHES -->
+    <section id="dishes">
+      <div class="container">
+        <div class="dishes-header fade-up">
+          <span class="section-label">Signature Flavours</span>
+          <h2 class="section-title">Our <em>Famous</em> Dishes</h2>
+          <div class="gold-line centered"></div>
+          <p
+            style="
+              max-width: 520px;
+              margin: 0 auto;
+              color: var(--text-light);
+              font-size: 0.95rem;
+              line-height: 1.8;
+            "
+          >
+            From coal-grilled classics to aromatic rice feasts — every dish at
+            Arabian Majlis is crafted to delight and satisfy.
+          </p>
+        </div>
+        <div class="dishes-grid">
+          <div class="dish-card fade-up">
+            <div class="dish-img food-alfaham" style="position: relative">
+              <div class="food-emoji">🍗</div>
+              <div class="dish-overlay"></div>
+              <div class="dish-tag">Bestseller</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-name">Chicken Peri Peri Alfaham</div>
+              <div class="dish-desc">
+                Tender whole chicken marinated in our signature Peri Peri spice
+                blend, grilled over live coals to charred perfection. A smoky,
+                spicy icon.
+              </div>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">₹280–₹380</span>
+              <span class="dish-order">Must Try</span>
+            </div>
+          </div>
+
+          <div class="dish-card fade-up" style="transition-delay: 0.1s">
+            <div class="dish-img food-mandi" style="position: relative">
+              <div class="food-emoji">🍚</div>
+              <div class="dish-overlay"></div>
+              <div class="dish-tag">Arabian Classic</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-name">Mandi Rice</div>
+              <div class="dish-desc">
+                Long-grain Basmati rice slow-cooked with saffron, whole spices,
+                and tender meat inside a traditional underground clay oven. Pure
+                Arabian soul food.
+              </div>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">₹220–₹350</span>
+              <span class="dish-order">Chef's Choice</span>
+            </div>
+          </div>
+
+          <div class="dish-card fade-up" style="transition-delay: 0.2s">
+            <div class="dish-img food-alfaham-mandi" style="position: relative">
+              <div class="food-emoji">🫕</div>
+              <div class="dish-overlay"></div>
+              <div class="dish-tag">Signature</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-name">Alfaham Mandi</div>
+              <div class="dish-desc">
+                The best of both worlds — our iconic Alfaham-style grilled
+                chicken served atop a bed of fragrant Mandi rice, with sides of
+                tangy salsa.
+              </div>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">₹300–₹400</span>
+              <span class="dish-order">Fan Favourite</span>
+            </div>
+          </div>
+
+          <div class="dish-card fade-up" style="transition-delay: 0.3s">
+            <div class="dish-img food-mazbi" style="position: relative">
+              <div class="food-emoji">🥩</div>
+              <div class="dish-overlay"></div>
+              <div class="dish-tag">Premium</div>
+            </div>
+            <div class="dish-body">
+              <div class="dish-name">Beef Mazbi</div>
+              <div class="dish-desc">
+                Slow-roasted premium beef pieces seasoned with Gulf spices,
+                served over saffron rice garnished with caramelised onions and
+                dry fruits.
+              </div>
+            </div>
+            <div class="dish-footer">
+              <span class="dish-price">₹320–₹400</span>
+              <span class="dish-order">Weekend Special</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DINING EXPERIENCE -->
+    <section id="dining">
+      <div class="container">
+        <div class="dining-grid">
+          <div class="fade-up">
+            <span class="section-label">The Experience</span>
+            <h2 class="section-title">Dine in <em>Style &</em><br />Comfort</h2>
+            <div class="gold-line"></div>
+            <p
+              style="
+                color: var(--text-light);
+                line-height: 1.9;
+                margin-bottom: 2.5rem;
+                font-size: 0.95rem;
+              "
+            >
+              Arabian Majlis Kondotty offers multiple ways to enjoy your meal —
+              from intimate traditional seating to modern dining setups, every
+              visit is an experience to cherish.
+            </p>
+            <div class="dining-features">
+              <div class="feature-item fade-up">
+                <div class="feature-icon">🪑</div>
+                <div class="feature-content">
+                  <h3>Traditional Majlis Seating</h3>
+                  <p>
+                    Recline on plush floor cushions and low settees in true
+                    Arabian majlis style — perfect for a leisurely, relaxed meal
+                    with family and friends.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item fade-up">
+                <div class="feature-icon">🍽</div>
+                <div class="feature-content">
+                  <h3>Table Seating</h3>
+                  <p>
+                    Prefer a conventional setup? Our well-spaced dining hall
+                    with elegant table arrangements ensures comfort for all
+                    guests.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item fade-up">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <div class="feature-content">
+                  <h3>Family Friendly Atmosphere</h3>
+                  <p>
+                    Welcoming spaces designed with families in mind. Bring
+                    everyone — we've got room, warmth, and food for all ages.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="service-modes">
+              <div class="service-badge"><span>🍽</span> Dine-In</div>
+              <div class="service-badge"><span>🚗</span> Drive-Through</div>
+              <div class="service-badge">
+                <span>📦</span> No-Contact Delivery
+              </div>
+            </div>
+          </div>
+
+          <div class="dining-visual fade-up">
+            <div class="dining-img dining-img-tall rest-int">
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 5rem;
+                  opacity: 0.5;
+                "
+              >
+                🏮
+              </div>
+            </div>
+            <div class="dining-img dining-img-square rest-majlis">
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 4rem;
+                  opacity: 0.5;
+                "
+              >
+                🛋️
+              </div>
+            </div>
+            <div class="dining-img dining-img-square food-alfaham">
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 4rem;
+                  opacity: 0.5;
+                "
+              >
+                🍗
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <div class="container">
+        <div class="gallery-header fade-up">
+          <span class="section-label">Visual Journey</span>
+          <h2 class="section-title">The <em>Ambience</em> & Food</h2>
+          <div class="gold-line centered"></div>
+        </div>
+        <div class="gallery-grid fade-up">
+          <div class="gallery-item gallery-food1">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 5rem;
+                opacity: 0.6;
+              "
+            >
+              🍗
+            </div>
+            <span class="gallery-label">Alfaham</span>
+          </div>
+          <div class="gallery-item gallery-amb1">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                opacity: 0.5;
+              "
+            >
+              🏮
+            </div>
+            <span class="gallery-label">Ambience</span>
+          </div>
+          <div class="gallery-item gallery-majlis1">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                opacity: 0.5;
+              "
+            >
+              🛋️
+            </div>
+            <span class="gallery-label">Majlis Seating</span>
+          </div>
+          <div class="gallery-item gallery-food2">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                opacity: 0.6;
+              "
+            >
+              🍚
+            </div>
+            <span class="gallery-label">Mandi Rice</span>
+          </div>
+          <div class="gallery-item gallery-amb2">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                opacity: 0.5;
+              "
+            >
+              🕌
+            </div>
+            <span class="gallery-label">Restaurant</span>
+          </div>
+          <div class="gallery-item gallery-majlis2">
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                opacity: 0.5;
+              "
+            >
+              ☕
+            </div>
+            <span class="gallery-label">Dining Hall</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="container">
+        <div class="reviews-header fade-up">
+          <span class="section-label">What Guests Say</span>
+          <h2 class="section-title">Guest <em>Reviews</em></h2>
+        </div>
+        <div class="overall-rating fade-up">
+          <div class="big-rating">4.2</div>
+          <div class="rating-details">
+            <div class="stars">★★★★☆</div>
+            <p>Based on 3,000+ reviews</p>
+            <p
+              style="margin-top: 0.2rem; color: var(--gold); font-size: 0.8rem"
+            >
+              Highly Recommended
+            </p>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card fade-up">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "The Chicken Peri Peri Alfaham here is absolutely unmatched in the
+              entire Malabar region. The smoky char, the spice balance — it's
+              perfection on a plate. We drive from Calicut just for this."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">MK</div>
+              <div>
+                <div class="author-name">Mohammed Kaleel</div>
+                <div class="author-date">Google Review · 2 months ago</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card fade-up" style="transition-delay: 0.15s">
+            <div class="review-stars">★★★★☆</div>
+            <p class="review-text">
+              "Love the majlis seating arrangement — feels so authentic! The
+              Mandi Rice with Beef Mazbi was outstanding. Great place for a
+              family outing. The service was warm and prompt."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">FA</div>
+              <div>
+                <div class="author-name">Fathima Ashraf</div>
+                <div class="author-date">Google Review · 1 month ago</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card fade-up" style="transition-delay: 0.3s">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Best Arabian food in Kerala without a doubt. The Alfaham Mandi is
+              a must-try. Generous portions, reasonable pricing, and the
+              ambience truly transports you to the Gulf."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">RS</div>
+              <div>
+                <div class="author-name">Rajeev Suresh</div>
+                <div class="author-date">Google Review · 3 weeks ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info fade-up">
+            <span class="section-label">Find Us</span>
+            <h2
+              class="section-title"
+              style="
+                font-size: 2.2rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Visit <em>Arabian Majlis</em>
+            </h2>
+            <div class="gold-line"></div>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-detail">
+                  <h4>Location</h4>
+                  <p>
+                    Thurakkal, Palakkad - Kozhikode Hwy<br />Kondotty, Kerala
+                    673638
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-detail">
+                  <h4>Phone</h4>
+                  <a href="tel:+917592993344">+91 75929 93344</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+                <div class="contact-detail">
+                  <h4>Opening Hours</h4>
+                  <div class="hours-grid">
+                    <span>Monday – Thursday</span
+                    ><span>11:00 AM – 11:00 PM</span> <span>Friday</span
+                    ><span>12:30 PM – 11:30 PM</span>
+                    <span>Saturday – Sunday</span
+                    ><span>10:30 AM – 11:30 PM</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">💰</div>
+                <div class="contact-detail">
+                  <h4>Price Range</h4>
+                  <p>₹200 – ₹400 per person</p>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+              <a
+                href="https://maps.google.com/?q=Arabian+Majlis+Kondotty+Thurakkal+Kerala"
+                target="_blank"
+                class="btn-primary"
+              >
+                📍 Get Directions
+              </a>
+              <a href="tel:+917592993344" class="btn-outline"> 📞 Call Us </a>
+            </div>
+          </div>
+          <div class="map-container fade-up">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.3984886984567!2d75.9510645749135!3d11.158102789014837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64fba7231fb75%3A0x126ec7dfd9321c99!2sArabian%20Majlis%20Kondotty!5e0!3m2!1sen!2sin!4v1772795082135!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div
+              style="
+                padding: 1rem 1.2rem;
+                background: rgba(44, 26, 10, 0.8);
+                border-top: 1px solid rgba(201, 150, 58, 0.15);
+              "
+            >
+              <p style="font-size: 0.8rem; color: var(--text-muted)">
+                📍 Thurakkal, Palakkad–Kozhikode Hwy, Kondotty, Kerala 673638
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="ornament">✦ ✦ ✦</div>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo">
+              Arabian Majlis
+              <span>Kondotty · Kerala</span>
+            </a>
+            <p>
+              Experience authentic Arabian cuisine in the heart of Kondotty.
+              From smoky Alfaham to fragrant Mandi — every meal is a journey to
+              Arabia.
+            </p>
+            <div class="footer-social">
+              <a
+                class="social-icon"
+                href="https://www.instagram.com/arabian.majlis/"
+                target="_blank"
+                title="Instagram"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-icon"
+                href="https://wa.me/917592993344"
+                target="_blank"
+                title="WhatsApp"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+              </a>
+              <a
+                class="social-icon"
+                href="https://maps.google.com/?q=Arabian+Majlis+Kondotty"
+                target="_blank"
+                title="Google Maps"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#dishes">Our Menu</a></li>
+              <li><a href="#dining">Dining Experience</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Specialties</h4>
+            <ul>
+              <li><a href="#dishes">Peri Peri Alfaham</a></li>
+              <li><a href="#dishes">Mandi Rice</a></li>
+              <li><a href="#dishes">Alfaham Mandi</a></li>
+              <li><a href="#dishes">Beef Mazbi</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <address>
+              Thurakkal, Palakkad-Kozhikode Hwy<br />
+              Kondotty, Kerala 673638<br /><br />
+              <a
+                href="tel:+917592993344"
+                style="color: var(--gold); text-decoration: none"
+                >+91 75929 93344</a
+              >
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Arabian Majlis Kondotty. All rights reserved.</p>
+          <p>Made with ❤️ in Kerala · <a href="#contact">Contact Us</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
