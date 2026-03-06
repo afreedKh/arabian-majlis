@@ -14,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+      <!-- Preload critical above-fold images -->
+  <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp" />
+  <link rel="preload" as="image" href="images/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- MOBILE NAV -->
@@ -32,7 +35,10 @@
     <!-- NAV -->
     <nav id="navbar">
       <a href="#hero" class="nav-logo-wrap">
-        <img src="" alt="Arabian Majlis Logo" class="nav-logo-img logo-img" />
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.jpg" alt="Arabian Majlis Logo" class="nav-logo-img" width="44" height="44" fetchpriority="high">
+        </picture>
         <div class="nav-logo-text">
           Arabian Majlis
           <span>Kondotty · Kerala</span>
@@ -54,11 +60,14 @@
 
     <!-- ═══ HERO ═══ -->
     <section id="hero">
-      <div class="hero-bg-img" id="heroBg"></div>
+      <div class="hero-bg-img" id="heroBg" style="background-image:url('images/hero-bg.webp')"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="hero-logo-wrap">
-          <img src="" alt="Arabian Majlis" class="hero-logo-img logo-img" />
+          <picture>
+            <source srcset="images/logo.webp" type="image/webp">
+            <img src="images/logo.jpg" alt="Arabian Majlis" class="hero-logo-img" width="100" height="100" fetchpriority="high">
+          </picture>
         </div>
         <div class="hero-badge">Since 2018 · Arabic but with a Twist</div>
         <h1 class="hero-title"><em>Arabian</em> Majlis<br />Kondotty</h1>
@@ -102,11 +111,7 @@
         <div class="about-grid">
           <div class="about-visual fade-up">
             <div class="about-img-main">
-              <img
-                src=""
-                alt="Arabian Majlis - No. 1 Mandi"
-                id="about-main-img"
-              />
+              <picture><source srcset="images/mandi-no1.webp" type="image/webp"><img src="images/mandi-no1.jpg" alt="Arabian Majlis No.1 Mandi" id="about-main-img" loading="lazy" width="600" height="800" decoding="async"></picture>
             </div>
             <div class="about-img-badge">
               <span class="num">4.2</span>
@@ -178,11 +183,7 @@
         <div class="dishes-grid">
           <div class="dish-card fade-up">
             <div class="dish-img">
-              <img
-                src=""
-                alt="Chicken Peri Peri Alfaham"
-                class="dish-real-img"
-              />
+              <picture><source srcset="images/alfaham-plate.webp" type="image/webp"><img src="images/alfaham-plate.jpg" alt="Chicken Peri Peri Alfaham" class="dish-real-img" loading="lazy" width="400" height="300" decoding="async"></picture>
               <div class="dish-tag">Bestseller</div>
             </div>
             <div class="dish-body">
@@ -199,7 +200,10 @@
           </div>
           <div class="dish-card fade-up" style="transition-delay: 0.1s">
             <div class="dish-img">
-              <img src="" alt="Mandi Rice" class="dish-real-img" />
+              <picture>
+          <source srcset="images/alfaham-plate.webp" type="image/webp">
+          <img src="images/alfaham-plate.jpg" alt="Chicken Peri Peri Alfaham" class="dish-real-img" loading="lazy" width="400" height="300" decoding="async">
+        </picture>
               <div class="dish-tag">Arabian Classic</div>
             </div>
             <div class="dish-body">
@@ -216,7 +220,10 @@
           </div>
           <div class="dish-card fade-up" style="transition-delay: 0.2s">
             <div class="dish-img">
-              <img src="" alt="Alfaham Mandi" class="dish-real-img" />
+              <picture>
+          <source srcset="images/mandi-home.webp" type="image/webp">
+          <img src="images/mandi-home.jpg" alt="Mandi Rice" class="dish-real-img" loading="lazy" width="400" height="300" decoding="async">
+        </picture>
               <div class="dish-tag">Signature</div>
             </div>
             <div class="dish-body">
@@ -233,7 +240,10 @@
           </div>
           <div class="dish-card fade-up" style="transition-delay: 0.3s">
             <div class="dish-img">
-              <img src="" alt="Beef Mazbi" class="dish-real-img" />
+              <picture>
+          <source srcset="images/mandi-eid.webp" type="image/webp">
+          <img src="images/mandi-eid.jpg" alt="Alfaham Mandi" class="dish-real-img" loading="lazy" width="400" height="300" decoding="async">
+        </picture>
               <div class="dish-tag">Premium</div>
             </div>
             <div class="dish-body">
@@ -288,28 +298,40 @@
         </div>
         <div class="iftar-grid fade-up">
           <div class="iftar-card">
-            <img src="" alt="Mutton Mazbi Combo Box" class="iftar-real-img" />
+            <picture>
+        <source srcset="images/iftar1.webp" type="image/webp">
+        <img src="images/iftar1.jpg" alt="Mutton Mazbi Combo Box" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async">
+      </picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Mutton Mazbi Combo Box</div>
               <div class="iftar-card-price">₹534</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img src="" alt="Beef Mazbi Combo Box" class="iftar-real-img" />
+            <picture>
+        <source srcset="images/iftar2.webp" type="image/webp">
+        <img src="images/iftar2.jpg" alt="Beef Mazbi Combo Box" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async">
+      </picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Beef Mazbi Combo Box</div>
               <div class="iftar-card-price">₹355</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img src="" alt="Alfaham Mazbi Combo Box" class="iftar-real-img" />
+            <picture>
+        <source srcset="images/iftar3.webp" type="image/webp">
+        <img src="images/iftar3.jpg" alt="Alfaham Mazbi Combo Box" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async">
+      </picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Alfaham Mazbi Combo</div>
               <div class="iftar-card-price">₹324</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img src="" alt="Shawaya Mazbi Combo Box" class="iftar-real-img" />
+            <picture>
+        <source srcset="images/iftar4.webp" type="image/webp">
+        <img src="images/iftar4.jpg" alt="Shawaya Mazbi Combo Box" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async">
+      </picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Shawaya Mazbi Combo</div>
               <div class="iftar-card-price">₹313</div>
@@ -333,40 +355,31 @@
         </div>
         <div class="iftar-grid2 fade-up">
           <div class="iftar-card">
-            <img
-              src=""
-              alt="Mutton Mazbi Iftar Dining"
-              class="iftar-real-img"
-            />
+            <picture><source srcset="images/iftar5.webp" type="image/webp"><img src="images/iftar5.jpg" alt="Mutton Mazbi Iftar Dining" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async"></picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Mutton Mazbi Combo</div>
               <div class="iftar-card-price">₹514</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img src="" alt="Beef Mazbi Iftar Dining" class="iftar-real-img" />
+            <picture>
+        <source srcset="images/iftar5.webp" type="image/webp">
+        <img src="images/iftar5.jpg" alt="Mutton Mazbi Iftar Dining" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async">
+      </picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Beef Mazbi Combo</div>
               <div class="iftar-card-price">₹335</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img
-              src=""
-              alt="Alfaham Mazbi Iftar Dining"
-              class="iftar-real-img"
-            />
+            <picture><source srcset="images/iftar7.webp" type="image/webp"><img src="images/iftar7.jpg" alt="Alfaham Mazbi Iftar Dining" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async"></picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Alfaham Mazbi Combo</div>
               <div class="iftar-card-price">₹304</div>
             </div>
           </div>
           <div class="iftar-card">
-            <img
-              src=""
-              alt="Shawaya Mazbi Iftar Dining"
-              class="iftar-real-img"
-            />
+            <picture><source srcset="images/iftar8.webp" type="image/webp"><img src="images/iftar8.jpg" alt="Shawaya Mazbi Iftar Dining" class="iftar-real-img" loading="lazy" width="400" height="530" decoding="async"></picture>
             <div class="iftar-card-overlay">
               <div class="iftar-card-title">Shawaya Mazbi Combo</div>
               <div class="iftar-card-price">₹293</div>
@@ -460,13 +473,13 @@
           </div>
           <div class="dining-mosaic fade-up" style="transition-delay: 0.2s">
             <div class="dining-mosaic-img dining-wide">
-              <img src="" alt="Arabian Majlis Dining" id="dining-img1" />
+              <picture><source srcset="images/mandi-no1.webp" type="image/webp"><img src="images/mandi-no1.jpg" alt="Arabian Majlis dining" id="dining-img1" loading="lazy" width="800" height="350" decoding="async"></picture>
             </div>
             <div class="dining-mosaic-img dining-sq">
-              <img src="" alt="Alfaham varieties" id="dining-img2" />
+              <picture><source srcset="images/hero-bg.webp" type="image/webp"><img src="images/hero-bg.jpg" alt="Alfaham varieties" id="dining-img2" loading="lazy" width="400" height="400" decoding="async"></picture>
             </div>
             <div class="dining-mosaic-img dining-sq">
-              <img src="" alt="Mandi delivery" id="dining-img3" />
+              <picture><source srcset="images/mandi-delivery.webp" type="image/webp"><img src="images/mandi-delivery.jpg" alt="Mandi delivery" id="dining-img3" loading="lazy" width="400" height="400" decoding="async"></picture>
             </div>
           </div>
         </div>
@@ -483,41 +496,37 @@
         </div>
         <div class="gallery-grid fade-up">
           <div class="g-item">
-            <img src="" alt="Chicken Alfaham" class="gallery-real-img" /><span
+            <picture><source srcset="images/hero-bg.webp" type="image/webp"><img src="images/hero-bg.jpg" alt="Chicken Peri Peri Alfaham varieties" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span
               class="g-label"
               >Peri Peri Alfaham</span
             >
           </div>
           <div class="g-item">
-            <img src="" alt="Mandi Rice" class="gallery-real-img" /><span
+            <picture><source srcset="images/mandi-no1.webp" type="image/webp"><img src="images/mandi-no1.jpg" alt="Mandi Rice No 1" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span
               class="g-label"
               >Mandi Rice</span
             >
           </div>
           <div class="g-item">
-            <img src="" alt="Alfaham plate" class="gallery-real-img" /><span
+            <picture><source srcset="images/alfaham-plate.webp" type="image/webp"><img src="images/alfaham-plate.jpg" alt="Alfaham plate" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span
               class="g-label"
               >Alfaham Mandi</span
             >
           </div>
           <div class="g-item">
-            <img src="" alt="Eid Mandi" class="gallery-real-img" /><span
+            <picture><source srcset="images/mandi-eid.webp" type="image/webp"><img src="images/mandi-eid.jpg" alt="Festive Mandi" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span
               class="g-label"
               >Festive Mandi</span
             >
           </div>
           <div class="g-item">
-            <img src="" alt="Food delivery" class="gallery-real-img" /><span
+            <picture><source srcset="images/mandi-delivery.webp" type="image/webp"><img src="images/mandi-delivery.jpg" alt="Home Delivery" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span
               class="g-label"
               >Home Delivery</span
             >
           </div>
           <div class="g-item">
-            <img
-              src=""
-              alt="Arabian Majlis brand"
-              class="gallery-real-img"
-            /><span class="g-label">Arabian Majlis</span>
+            <picture><source srcset="images/mandi-home.webp" type="image/webp"><img src="images/mandi-home.jpg" alt="Arabian Majlis brand" class="gallery-real-img" loading="lazy" width="600" height="400" decoding="async"></picture><span class="g-label">Arabian Majlis</span>
           </div>
         </div>
       </div>
@@ -666,11 +675,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo-row">
-              <img
-                src=""
-                alt="Arabian Majlis"
-                class="footer-logo-img logo-img"
-              />
+              <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.jpg" alt="Arabian Majlis" class="footer-logo-img" loading="lazy" width="42" height="42" decoding="async"></picture>
               <div class="footer-brand-name">
                 Arabian Majlis<span>Kondotty · Kerala</span>
               </div>
